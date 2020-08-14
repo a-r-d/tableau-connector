@@ -237,6 +237,7 @@
         return Promise.resolve().then(fetchMore);
       })
       .catch(function(error) {
+        console.error('Error: ', error)
         alert(error.message);
       })
       .finally(done);
@@ -357,6 +358,7 @@
         tableau.submit();
       })
       .catch(function(error) {
+        console.error('Error: ', error)
         errorsDiv.innerHTML = error.message;
       });
   }
